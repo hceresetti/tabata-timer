@@ -1,0 +1,19 @@
+<h2>Control Flow</h2>
+<input type="number" [(ngModel)]="num" />
+<input type="button" value="Refresh" (click)="update()" />
+<hr />
+<table border="1">
+  <tr>
+    <th>Index</th>
+    <th>Number</th>
+    <th>Even or odd</th>
+  </tr>
+  <tr *ngFor="let num of getNumbers(); index as i">
+    <td>{{ i + 1 }}</td>
+    <td>{{ num }}</td>
+    <td>
+      <span *ngIf="num % 2 == 0">EVEN</span>
+      <span *ngIf="num % 2 != 0">ODD</span>
+    </td>
+  </tr>
+</table>
