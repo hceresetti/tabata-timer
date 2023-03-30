@@ -1,19 +1,30 @@
-<h2>Control Flow</h2>
-<input type="number" [(ngModel)]="num" />
-<input type="button" value="Refresh" (click)="update()" />
-<hr />
-<table border="1">
-  <tr>
-    <th>Index</th>
-    <th>Number</th>
-    <th>Even or odd</th>
-  </tr>
-  <tr *ngFor="let num of getNumbers(); index as i">
-    <td>{{ i + 1 }}</td>
-    <td>{{ num }}</td>
-    <td>
-      <span *ngIf="n % 2 == 0">EVEN</span>
-      <span *ngIf="n % 2 != 0">ODD</span>
-    </td>
-  </tr>
-</table>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flow Component</title>
+    <link rel="stylesheet" href="./flow/flow.component.css" />
+  </head>
+  <body>
+    <h1>Control Flow</h1>
+    <input type="number" [(ngModel)]="num" />
+    <input type="button" value="Refresh" (click)="update()" />
+    <br />
+    <table>
+      <tr>
+        <th>Index</th>
+        <th>Number</th>
+        <th>Even or odd</th>
+      </tr>
+      <tr *ngFor="let num of getNumbers(); index as i">
+        <td>{{ i + 1 }}</td>
+        <td>{{ num }}</td>
+        <td>
+          <span *ngIf="n % 2 == 0">EVEN</span>
+          <span *ngIf="n % 2 != 0">ODD</span>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

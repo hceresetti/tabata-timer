@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Timer Component</title>
+    <link rel="stylesheet" href="./timer/timer.component.css" />
+  </head>
+  <body>
+    <h1>{{ name }}</h1>
+    <div>
+      Timer: {{ counter }}
+      <input type="button" value="increment" (click)="increment()" />
+    </div>
+  </body>
+</html>

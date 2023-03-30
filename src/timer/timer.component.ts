@@ -1,12 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-counter',
+  selector: 'app-timer',
   standalone: true,
-  templateUrl: './counter.component.html',
-  styleUrls: ['./counter.component.css'],
+  template: `Tabata Timer`,
 })
-export class CounterComponent implements OnInit {
+export class TimerComponent implements OnInit {
   @Input() name: string;
 
   counter: number = 0;
